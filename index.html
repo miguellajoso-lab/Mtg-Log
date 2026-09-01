@@ -1555,12 +1555,13 @@ function removeSbEntry(kind, name){
   changesDraft[kind] = changesDraft[kind].filter(e=>e.name!==name);
   refreshSbSummary();
 }
-function changesBlockHtml(deckId){
+function changesBlockHtml(deckId, mode){
   const deck = deckById(deckId);
+  const handler = mode==='quick' ? 'openSbPickerFromQuick()' : 'openSbPickerFromRound()';
   return `
     <label>Sideboard</label>
     <div id="sb-summary">${sbSummaryHtml()}</div>
-    ${deck ? `<button type="button" class="btn-secondary" style="width:100%; margin-top:8px; display:flex; align-items:center; justify-content:center; gap:8px;" onclick="${sbReturnMode==='quick'?'openSbPickerFromQuick()':'openSbPickerFromRound()'}">${ICON('book')} Sideboard</button>`
+    ${deck ? `<button type="button" class="btn-secondary" style="width:100%; margin-top:8px; display:flex; align-items:center; justify-content:center; gap:8px;" onclick="${handler}">${ICON('book')} Sideboard</button>`
       : `<div class="fine">Este deck ainda não tem lista guardada.</div>`}
   `;
 }
@@ -1745,7 +1746,7 @@ function openModalNewRound(tournamentId, keepDraft){
           <input id="r-gd" type="number" min="0" max="3" placeholder="Empat." value="${esc(roundDraft.gd)}">
         </div>
 
-        ${changesBlockHtml(t.deckId)}
+        ${changesBlockHtml(t.deckId, 'round')}
 
         <div class="modal-actions">
           <button class="btn-secondary" onclick="closeModal()">Cancelar</button>
@@ -1857,7 +1858,7 @@ function openModalNewQuick(keepDraft){
         <label for="q-note">Nota (ex. nome do evento/liga)</label>
         <input id="q-note" placeholder="opcional" value="${esc(quickDraft.note)}">
 
-        ${changesBlockHtml(quickDraft.deckId)}
+        ${changesBlockHtml(quickDraft.deckId, 'quick')}
 
         <div class="modal-actions">
           <button class="btn-secondary" onclick="closeModal()">Cancelar</button>
