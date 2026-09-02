@@ -1,0 +1,2026 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="MTG Log">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAE4klEQVR4nO3cwXUbNxSF4WuX4AbsPuw+srG3KSpbr9xHCkkFriEL+NBKpCeBMxzg3ff+f6lDYijhI2Y4gvTu4+evInqp97tfAOUNHBQGDgoDB4WBg8LAQWHgoDBwUBg4KAwcFAYOCgMHhYGDwsBBYeCgMHBQGDgoDBwUBg4KAweFgYPCwEFh4KAwcFAYOCgMHBQGDgoDB4WBg8LAQWHgoDBw/Kd//v6++yUkChy/GzLwcQscv3pqAh8jcEgvacCHwKHYAT6643hdQHMfrXHMzH1nH31xzM96Wx9Ncdw73z19dMRxbKYb+miH48wcd/PRC8ebs/vpy7eTI1SqEY5JGfi41QXHXWsGPkYtcBw4m+BDHXAcvs7AR3EcJ69Am/uojOP8Z5OZxxT2URbHQ2RMPrKqj5o4Hihj8vElfRTE8XAZk8+q56MajotkTD63mI9SOC6VMTlCJR91cCyQMTlOGR9FcCyTMTlaDR8VcCyWMTlmAR/2OLbImBzZ3Yc3jo0yJse39mGMY7uMyaP4+nDFkUTG5LFMfVjiSCVj8oiOPvxwJJQxeVw7H2Y40sqYPLqXDyccyWVMvgYjHzY4LGSMyvjwwGEkY1TDhwEOOxmjAj6y4zCVMXL3kRqHtYyRtY+8OArIGPn6SIqjjIyRqY+MOIrJGDn6SIejpIyRnY9cOArLGHn5ePfx89fdr+FXG2X89cfP51/888eHiw7n8h7IgmPLz+tFE8+7QomFjxSnlcwy7nrkfBbnl/0rx3oZhyf74UtI8vVj88phJOPkc18s+fqxE4eXjEeN8L8y+9iGI/mKurK0PvbgSH4Fumacp+X0sQGHtYwrRhsl9LEaB2eTV8rmYykOZLxZKh/rcGS7O55wzFEeH4twsGbcVRIfK3Ag40AZfFyOAxmH2+7jchzbv0Pftr+vVpxW8HGg7TK07IIUH3eVQYZWfpTd6OOK3Tod9oktvQnG+vFmeWRo/e1zfLxSKhna8ou3LT4eexZosqt0z6/srX00kaGNm304v9zKKUN7twmu93H+Td9qj/HmDcZePlrJUIY/TZDD3rA+1xlPS/FHTcmvT3vKUJKVY5RtN1CHe6CvlwiHfH5qZzL6HlOcVm6V/3xrJEPZcKi0Dy8ZSohDRX3YyVBOHCrnw1GG0uJQIR+mMpQZh0r48JWh5Dhk7sNahvLjkK0PdxmywCFDHwVkyAWHrHzUkCEjHDLxUUaGvHAovY9KMmSHQ4l9FJMhRxxK6aOeDJniUDIfJWXIF4fS+KgqQ9Y4lMBHYRlyx6GtPmrLUAEc2uSjvAzVwKHlPjrIUBkcWuijiQxVwqElPvrIUDEcuthHKxmqh0OX+egmQyVx6AIfDWWoKg491EdPGSqMQw/y0VaGauPQaR+dZag8Dp3w0VyGOuDQIR/IUBMcutMHMkZdcGjaBzJu5frnLQs6eQe9jwy1WjlGZ2a3lQw1xKGjc9xNhnri0P0z3VCG2uLQPfPdU4Y649DcrLeVoeY49Nbcd5YhcCgW0FyGwDF67gAZAsetpxqQMQLH74YJZNxqd/uc5mPloDBwUBg4KAwcFAYOCgMHhYGDwsBBYeCgMHBQGDgoDBwUBg4KAweFgYPCwEFh4KAwcFAYOCgMHBQGDgoDB4WBg8LAQWHgoDBwUBg4KAwcFAYOCgMHhf0L9ni1chS8fz4AAAAASUVORK5CYII=">
+<title>Registo MTG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #F3EEE0;
+    --bg-alt: #E9E1CB;
+    --ink: #1C2431;
+    --ink-soft: #565B66;
+    --ink-faint: #8B8A7E;
+    --primary: #1F3B5C;
+    --primary-soft: #6C86A3;
+    --gold: #B9924A;
+    --win: #33684E;
+    --win-bg: #E1EBE3;
+    --loss: #93413B;
+    --loss-bg: #F1E1DE;
+    --draw: #756F5E;
+    --draw-bg: #E9E4D6;
+    --card: #FBF8EF;
+    --line: #D8CFB4;
+    --radius: 3px;
+    --shadow: 0 1px 0 rgba(28,36,49,0.05);
+    --bg-dots: rgba(28,36,49,0.05);
+    --input-bg: #FFFFFF;
+    font-size: 16px;
+  }
+  html[data-theme="dark"]{
+    --bg: #171B22;
+    --bg-alt: #1F2530;
+    --ink: #ECE6D6;
+    --ink-soft: #A8ADBB;
+    --ink-faint: #6B7280;
+    --primary: #7FA2CC;
+    --primary-soft: #4C6A8C;
+    --gold: #D4AD63;
+    --win: #6FBE93;
+    --win-bg: #1E332A;
+    --loss: #E08579;
+    --loss-bg: #3A2422;
+    --draw: #A6A08D;
+    --draw-bg: #2A2A24;
+    --card: #1D222B;
+    --line: #313846;
+    --shadow: 0 1px 0 rgba(0,0,0,0.2);
+    --bg-dots: rgba(255,255,255,0.045);
+    --input-bg: #10141B;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color: transparent;}
+  html,body{height:100%;}
+  html{transition: background-color .2s ease;}
+  body{
+    margin:0;
+    background: var(--bg);
+    background-image: radial-gradient(circle at 1px 1px, var(--bg-dots) 1px, transparent 0);
+    background-size: 14px 14px;
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    display:flex;
+    justify-content:center;
+    transition: background-color .2s ease, color .2s ease;
+  }
+  #shell{
+    width:100%;
+    max-width:480px;
+    min-height:100vh;
+    background: var(--bg);
+    display:flex;
+    flex-direction:column;
+    position:relative;
+  }
+  header.topbar{
+    padding: 16px 18px 14px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom: 1px solid var(--line);
+    background: var(--bg);
+    position:sticky; top:0; z-index:5;
+  }
+  header.topbar .brand-row{display:flex; align-items:center; gap:10px;}
+  header.topbar .logo-mark{
+    width:34px; height:34px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    background: var(--primary);
+    border-radius: 8px;
+  }
+  header.topbar .logo-mark svg{width:19px; height:19px;}
+  header.topbar .brand{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size: 1.32rem;
+    letter-spacing: -0.01em;
+    line-height:1.1;
+  }
+  header.topbar .brand .dot{color:var(--gold);}
+  header.topbar .sub{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.64rem;
+    color: var(--ink-faint);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+  }
+  header.topbar .head-actions{display:flex; align-items:center; gap:4px;}
+  .icon-btn{
+    background:none;
+    width:34px; height:34px;
+    display:flex; align-items:center; justify-content:center;
+    border-radius:50%;
+    color: var(--ink-soft);
+    flex-shrink:0;
+  }
+  .icon-btn svg{width:18px; height:18px;}
+  .icon-btn:active{background: var(--bg-alt);}
+  main{
+    flex:1;
+    padding: 16px 16px 96px;
+    overflow-y:auto;
+  }
+  h2.section-title{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.05rem;
+    margin: 4px 2px 12px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  h2.section-title .num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    color: var(--gold);
+    border:1px solid var(--gold);
+    border-radius:50%;
+    width:20px; height:20px;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .card{
+    background: var(--card);
+    border:1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding:16px;
+    margin-bottom:14px;
+  }
+  .stat-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:10px;
+  }
+  .stat-box{
+    background: var(--card);
+    border:1px solid var(--line);
+    border-radius: var(--radius);
+    padding:14px 12px;
+    text-align:left;
+  }
+  .stat-box .label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    text-transform:uppercase;
+    letter-spacing:0.07em;
+    color: var(--ink-faint);
+    margin-bottom:6px;
+  }
+  .stat-box .value{
+    font-family:'Fraunces', serif;
+    font-size:1.9rem;
+    font-weight:600;
+    color: var(--primary);
+    line-height:1;
+  }
+  .stat-box .value.win{color:var(--win);}
+  .stat-box .sub{
+    font-size:0.72rem;
+    color: var(--ink-soft);
+    margin-top:4px;
+  }
+  table.ledger{
+    width:100%;
+    border-collapse:collapse;
+    font-size:0.85rem;
+  }
+  table.ledger th{
+    text-align:left;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--ink-faint);
+    border-bottom:1px solid var(--line);
+    padding:4px 6px 8px 0;
+  }
+  table.ledger td{
+    padding:8px 6px 8px 0;
+    border-bottom: 1px dashed var(--line);
+    vertical-align:middle;
+  }
+  table.ledger tr:last-child td{border-bottom:none;}
+  .pct-bar{
+    height:5px;
+    background: var(--bg-alt);
+    border-radius:3px;
+    overflow:hidden;
+    margin-top:4px;
+    width:100%;
+  }
+  .pct-bar > div{height:100%; background: var(--primary);}
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:600;
+    font-size:0.68rem;
+    width:22px; height:22px;
+    border-radius:50%;
+    color:#fff;
+    flex-shrink:0;
+  }
+  .badge.W{background:var(--win);}
+  .badge.L{background:var(--loss);}
+  .badge.D{background:var(--draw);}
+  .empty{
+    text-align:center;
+    padding: 30px 16px;
+    color: var(--ink-faint);
+    font-size:0.88rem;
+  }
+  .empty .glyph{font-size:1.8rem; display:block; margin-bottom:8px;}
+  button{
+    font-family:'Inter', sans-serif;
+    cursor:pointer;
+    border:none;
+  }
+  .btn-primary{
+    width:100%;
+    background: var(--primary);
+    color:#fff;
+    padding:13px;
+    border-radius: var(--radius);
+    font-weight:600;
+    font-size:0.92rem;
+    letter-spacing:0.01em;
+  }
+  .btn-primary:active{background:#16283e;}
+  .btn-secondary{
+    background: transparent;
+    color: var(--primary);
+    border:1px solid var(--primary-soft);
+    padding:10px 14px;
+    border-radius: var(--radius);
+    font-weight:600;
+    font-size:0.85rem;
+  }
+  .btn-danger{
+    background:transparent;
+    color: var(--loss);
+    border:1px solid var(--loss);
+    padding:9px 12px;
+    border-radius:var(--radius);
+    font-size:0.8rem;
+    font-weight:600;
+  }
+  .btn-ghost{
+    background:transparent;
+    color:var(--ink-soft);
+    padding:8px 10px;
+    font-size:0.8rem;
+    text-decoration:underline;
+    text-underline-offset:2px;
+  }
+  .btn-small{
+    background: var(--bg-alt);
+    color: var(--primary);
+    padding:8px 12px;
+    border-radius: var(--radius);
+    font-size:0.78rem;
+    font-weight:600;
+  }
+  input, select, textarea{
+    width:100%;
+    font-family:'Inter', sans-serif;
+    font-size:0.92rem;
+    padding:11px 12px;
+    border:1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--input-bg);
+    color: var(--ink);
+  }
+  input::placeholder, textarea::placeholder{ color: var(--ink-faint); opacity:1; }
+  select{ color: var(--ink); }
+  textarea{font-family:'IBM Plex Mono', monospace; font-size:0.82rem; line-height:1.5;}
+  input:focus, select:focus, textarea:focus{
+    outline:2px solid var(--primary-soft);
+    outline-offset:1px;
+  }
+  label{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.65rem;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color: var(--ink-faint);
+    margin: 12px 0 6px;
+  }
+  label:first-child{margin-top:0;}
+  .row2{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+  .row3{display:grid; grid-template-columns:0.6fr 1fr 1fr; gap:8px;}
+  .row3-eq{display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px;}
+  .seg{
+    display:flex;
+    border:1px solid var(--line);
+    border-radius: var(--radius);
+    overflow:hidden;
+  }
+  .seg button{
+    flex:1;
+    padding:10px 0;
+    background:#fff;
+    font-weight:600;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    border-right:1px solid var(--line);
+  }
+  .seg button:last-child{border-right:none;}
+  .seg button.active.W{background:var(--win-bg); color:var(--win);}
+  .seg button.active.L{background:var(--loss-bg); color:var(--loss);}
+  .seg button.active.D{background:var(--draw-bg); color:var(--draw);}
+
+  .ticket{
+    background: var(--card);
+    border:1px solid var(--line);
+    border-radius: var(--radius);
+    position:relative;
+    padding:18px 16px 16px;
+    margin-bottom:16px;
+  }
+  .ticket::after{
+    content:"";
+    position:absolute;
+    left:14px; right:14px; bottom:0;
+    border-bottom:1px dashed var(--line);
+  }
+  .ticket .stamp{
+    position:absolute;
+    top:14px; right:14px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    letter-spacing:0.08em;
+    color:var(--gold);
+    border:1px solid var(--gold);
+    border-radius:20px;
+    padding:3px 9px;
+    transform: rotate(3deg);
+  }
+  .ticket .store{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.15rem;
+    margin-bottom:2px;
+    padding-right:70px;
+  }
+  .ticket .meta{
+    font-size:0.78rem;
+    color: var(--ink-soft);
+  }
+  .ticket .record{
+    margin-top:14px;
+    display:flex;
+    gap:16px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+  }
+  .round-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 10px;
+    margin:0 -10px;
+    border-bottom:1px dashed var(--line);
+    border-left:3px solid transparent;
+    border-radius:2px;
+  }
+  .round-row.W{border-left-color:var(--win); background: color-mix(in srgb, var(--win-bg) 55%, transparent);}
+  .round-row.L{border-left-color:var(--loss); background: color-mix(in srgb, var(--loss-bg) 55%, transparent);}
+  .round-row.D{border-left-color:var(--draw); background: color-mix(in srgb, var(--draw-bg) 55%, transparent);}
+  .round-row:last-child{border-bottom:none;}
+  .round-row .rn{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--ink-faint);
+    font-size:0.72rem;
+    width:22px;
+    flex-shrink:0;
+  }
+  .round-row .opp{flex:1; font-size:0.88rem; min-width:0;}
+  .round-row .score{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    color:var(--ink-faint);
+  }
+  .tabbar{
+    position:fixed;
+    bottom:0; left:50%; transform:translateX(-50%);
+    width:100%; max-width:480px;
+    background: var(--card);
+    border-top:1px solid var(--line);
+    display:flex;
+    padding: 6px 2px calc(6px + env(safe-area-inset-bottom));
+    z-index:10;
+  }
+  .tabbar button{
+    flex:1;
+    background:none;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:3px;
+    padding:8px 1px 4px;
+    color: var(--ink-faint);
+    font-size:0.56rem;
+    font-family:'IBM Plex Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    border-radius:var(--radius);
+  }
+  .tabbar button .ic{font-size:1.1rem; display:flex; align-items:center; justify-content:center;}
+  .tabbar button .ic svg{width:19px; height:19px;}
+  .tabbar button.active{color:var(--primary);}
+  .tabbar button.active .ic{color:var(--gold);}
+
+  .fab{
+    position:fixed;
+    right:calc(50% - 240px + 18px);
+    bottom:calc(70px + env(safe-area-inset-bottom));
+    width:54px; height:54px;
+    border-radius:50%;
+    background: var(--primary);
+    color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.22);
+    z-index:8;
+  }
+  .fab svg{width:24px; height:24px;}
+  .fab:active{transform:scale(0.94);}
+  @media (max-width:480px){
+    .fab{ right: 18px; }
+  }
+
+  .toast{
+    position:fixed;
+    left:50%; bottom:calc(78px + env(safe-area-inset-bottom));
+    transform: translateX(-50%) translateY(8px);
+    background: var(--ink);
+    color: var(--bg);
+    padding:10px 18px;
+    border-radius:20px;
+    font-size:0.82rem;
+    font-weight:600;
+    display:flex; align-items:center; gap:8px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    z-index:30;
+    opacity:0;
+    pointer-events:none;
+    transition: opacity .18s ease, transform .18s ease;
+  }
+  .toast.show{ opacity:1; transform: translateX(-50%) translateY(0); }
+  .toast svg{width:15px; height:15px; color: var(--win); flex-shrink:0;}
+  .modal-bg{
+    position:fixed; inset:0; background:rgba(28,36,49,0.45);
+    display:flex; align-items:flex-end; justify-content:center;
+    z-index:20;
+  }
+  .modal{
+    width:100%; max-width:480px;
+    background: var(--bg);
+    border-radius: 14px 14px 0 0;
+    padding:20px 18px calc(20px + env(safe-area-inset-bottom));
+    max-height:88vh;
+    overflow-y:auto;
+    animation: slideup .18s ease-out;
+    position:relative;
+  }
+  @keyframes slideup{from{transform:translateY(24px); opacity:0.6} to{transform:translateY(0); opacity:1}}
+  .modal h3{
+    font-family:'Fraunces', serif;
+    font-size:1.15rem;
+    margin: 0 0 14px;
+    font-weight:600;
+    padding-right:24px;
+  }
+  .modal-actions{display:flex; gap:10px; margin-top:18px;}
+  .modal-actions .btn-secondary{flex:1;}
+  .modal-actions .btn-primary{flex:1;}
+  .close-x{
+    position:absolute; top:14px; right:16px;
+    background:none; color:var(--ink-faint); font-size:1.1rem;
+  }
+  .list-item{
+    display:flex; align-items:flex-start; justify-content:space-between;
+    gap:10px; padding:12px 0; border-bottom:1px dashed var(--line);
+  }
+  .list-item:last-child{border-bottom:none;}
+  .list-item .name{font-weight:600; font-size:0.9rem;}
+  .list-item .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.65rem; color:var(--ink-faint); margin-top:2px;
+  }
+  .del-x{color:var(--loss); font-size:0.72rem; background:none; text-decoration:underline; flex-shrink:0;}
+  .fine{font-size:0.72rem; color:var(--ink-faint); margin-top:2px;}
+  .deck-card{
+    background: var(--card);
+    border:1px solid var(--line);
+    border-radius: var(--radius);
+    padding:14px 16px;
+    margin-bottom:12px;
+  }
+  .deck-card .top{display:flex; justify-content:space-between; align-items:flex-start; gap:10px;}
+  .deck-card .dname{font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem;}
+  .deck-card .dmeta{font-size:0.74rem; color:var(--ink-faint); margin-top:2px; font-family:'IBM Plex Mono', monospace;}
+  .deck-card .actions{display:flex; gap:8px; margin-top:10px;}
+  .deck-list-view{
+    white-space:pre-wrap;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    background: var(--bg-alt);
+    border-radius: var(--radius);
+    padding:10px 12px;
+    margin-top:8px;
+    max-height:140px;
+    overflow-y:auto;
+    color: var(--ink-soft);
+  }
+  .toggle-list{font-size:0.72rem; color:var(--primary-soft); text-decoration:underline; background:none; margin-top:8px;}
+  .deck-pill{
+    display:inline-block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    background: var(--bg-alt);
+    border-radius: 20px;
+    padding:5px 11px;
+    margin-bottom:2px;
+  }
+  .change-row{
+    display:flex; align-items:center; gap:8px;
+    background: var(--bg-alt);
+    border-radius: var(--radius);
+    padding:8px 10px;
+    margin-bottom:6px;
+    font-size:0.82rem;
+  }
+  .change-row .qtytag{
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:600; color:var(--primary); flex-shrink:0;
+  }
+  .change-row .arrow{color:var(--ink-faint); flex-shrink:0;}
+  .change-row .out{color:var(--loss); flex:1; min-width:0;}
+  .change-row .in{color:var(--win); flex:1; min-width:0;}
+  .change-row .rm{background:none; color:var(--ink-faint); font-size:0.9rem; flex-shrink:0;}
+  .changes-add-grid{display:grid; grid-template-columns:0.5fr 1fr 1fr auto; gap:6px; align-items:center;}
+  .changes-add-grid input{padding:9px 8px; font-size:0.8rem;}
+  .changes-add-grid button{
+    background:var(--primary); color:#fff; border-radius:var(--radius);
+    width:34px; height:34px; font-size:1.1rem; flex-shrink:0;
+  }
+  .deck-select-view{
+    background: var(--bg-alt);
+    border-radius: var(--radius);
+    padding:10px 12px;
+    margin-bottom:4px;
+    font-size:0.82rem;
+  }
+  .archetype-block{margin-bottom:20px;}
+  .archetype-block .aname{
+    font-family:'Fraunces', serif; font-weight:600; font-size:0.95rem;
+    margin-bottom:8px; display:flex; align-items:center; gap:8px;
+  }
+  .archetype-block .aname .arec{
+    font-family:'IBM Plex Mono', monospace; font-size:0.68rem; color:var(--ink-faint); font-weight:400;
+  }
+  .ring-wrap{display:flex; align-items:center; gap:12px;}
+  .ring-wrap svg{flex-shrink:0;}
+  .ring-wrap .ring-num{display:flex; flex-direction:column;}
+  .onboard-card{
+    background: var(--card);
+    border:1px solid var(--line);
+    border-radius: 10px;
+    padding:28px 22px;
+    text-align:center;
+    margin-bottom:16px;
+  }
+  .onboard-card .icon-circle{
+    width:56px; height:56px; border-radius:50%;
+    background: var(--bg-alt);
+    display:flex; align-items:center; justify-content:center;
+    margin:0 auto 14px;
+    color: var(--primary);
+  }
+  .onboard-card .icon-circle svg{width:26px; height:26px;}
+  .onboard-card h3{
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.15rem; margin:0 0 6px;
+  }
+  .onboard-card p{
+    font-size:0.85rem; color:var(--ink-soft); margin:0 0 18px; line-height:1.5;
+  }
+  .about-row{
+    display:flex; align-items:center; gap:10px;
+    padding:10px 0; border-bottom:1px dashed var(--line); font-size:0.85rem;
+  }
+  .about-row:last-child{border-bottom:none;}
+  .about-row .k{color:var(--ink-faint); flex:1;}
+  .theme-seg-icon svg{width:15px; height:15px;}
+  .ico{width:1em; height:1em; display:inline-block; vertical-align:-0.14em; flex-shrink:0;}
+  .nav-row{
+    width:100%; background:none;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:13px 2px; border-bottom:1px dashed var(--line); text-align:left;
+  }
+  .nav-row:last-child{border-bottom:none;}
+  .nav-row:active{background: var(--bg-alt);}
+  .nav-row .nr-title{font-weight:600; font-size:0.92rem; color:var(--ink);}
+  .nav-row .nr-sub{font-size:0.7rem; color:var(--ink-faint); font-family:'IBM Plex Mono',monospace; margin-top:2px;}
+  .nav-row .chev{color:var(--ink-faint); flex-shrink:0; font-size:1.3rem; line-height:1;}
+
+  /* ============ VERSÃO DESKTOP (ecrãs largos, ex. Chrome em computador) ============ */
+  .sidebar-cta{display:none;}
+  @media (min-width: 880px){
+    body{ background-size: 20px 20px; align-items:flex-start; }
+    #shell{
+      max-width: 1100px;
+      display:grid;
+      grid-template-columns: 220px 1fr;
+      grid-template-rows: auto 1fr;
+      min-height:100vh;
+    }
+    header.topbar{ grid-column: 1 / 3; grid-row: 1; padding: 20px 32px 16px; }
+    header.topbar .brand{ font-size:1.5rem; }
+    main{
+      grid-column: 2; grid-row: 2;
+      padding: 28px 40px 48px;
+      max-width: 780px;
+    }
+    .card, .ticket, .deck-card, .onboard-card{ max-width:100%; }
+    .stat-grid{ grid-template-columns: 1fr 1fr; gap:16px; }
+
+    .tabbar{
+      grid-column: 1; grid-row: 2;
+      position:static;
+      transform:none;
+      width:auto; max-width:none;
+      height:100%;
+      flex-direction:column;
+      align-items:stretch;
+      justify-content:flex-start;
+      background:transparent;
+      border-top:none;
+      border-right:1px solid var(--line);
+      padding: 22px 14px;
+      gap:2px;
+    }
+    .sidebar-cta{
+      display:flex; align-items:center; justify-content:center; gap:8px;
+      background: var(--primary); color:#fff;
+      padding:12px 14px; border-radius:8px;
+      font-family:'Inter',sans-serif; font-weight:600; font-size:0.82rem;
+      text-transform:none; letter-spacing:normal;
+      margin-bottom:16px; cursor:pointer;
+    }
+    .sidebar-cta:hover{ opacity:0.92; }
+    .sidebar-cta svg{width:16px; height:16px;}
+    .tabbar button{
+      flex-direction:row;
+      justify-content:flex-start;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:8px;
+      font-size:0.8rem;
+      text-transform:none;
+      letter-spacing:normal;
+      cursor:pointer;
+    }
+    .tabbar button:hover{ background: var(--bg-alt); }
+    .tabbar button .ic{font-size:1rem;}
+    .tabbar button .ic svg{width:17px; height:17px;}
+
+    .fab{ display:none; }
+
+    button, .btn-primary, .btn-secondary, .btn-danger, .btn-small, .icon-btn, .nav-row, .deck-card .actions button{ cursor:pointer; }
+    .btn-primary:hover{ background:#16283e; }
+    html[data-theme="dark"] .btn-primary:hover{ background:#a9c4e8; }
+    .btn-secondary:hover, .btn-danger:hover{ background: var(--bg-alt); }
+    .deck-card:hover, .nav-row:hover{ border-color: var(--primary-soft); }
+
+    .modal-bg{ align-items:center; }
+    .modal{
+      max-width:460px;
+      border-radius:14px;
+      max-height:85vh;
+    }
+
+    .toast{ left: calc(220px + (100% - 220px)/2); }
+  }
+
+  /* ============ folha de exportação do guia de sideboard (impressão/PDF) ============ */
+  #sb-export-sheet{ display:none; }
+  @media print{
+    body *{ visibility:hidden; }
+    #sb-export-sheet, #sb-export-sheet *{ visibility:visible; }
+    #sb-export-sheet{
+      display:block;
+      position:absolute; top:0; left:0; width:100%;
+      background:#fff; color:#111;
+      font-family: Georgia, 'Times New Roman', serif;
+      padding:0;
+    }
+    .exp-header{ margin-bottom:22px; border-bottom:2px solid #111; padding-bottom:12px; }
+    .exp-title{ font-size:22pt; font-weight:700; }
+    .exp-sub{ font-size:12pt; margin-top:2px; }
+    .exp-date{ font-size:9pt; color:#555; margin-top:4px; font-family: 'Courier New', monospace; }
+    .exp-arch{ margin-bottom:20px; page-break-inside:avoid; }
+    .exp-arch-title{ font-size:14pt; font-weight:700; border-bottom:1px solid #999; padding-bottom:4px; margin-bottom:8px; }
+    .exp-arch-count{ font-size:9pt; font-weight:400; color:#555; font-family:'Courier New', monospace; margin-left:8px; }
+    .exp-cols{ display:flex; gap:28px; }
+    .exp-col{ flex:1; }
+    .exp-col-title{ font-size:10pt; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:6px; }
+    .exp-col-out .exp-col-title{ color:#7a2a24; }
+    .exp-col-in .exp-col-title{ color:#1f5c3f; }
+    .exp-col ul{ list-style:none; margin:0; padding:0; }
+    .exp-col li{ font-size:11pt; padding:3px 0; border-bottom:1px dotted #ccc; }
+    .exp-qty{ font-family:'Courier New', monospace; font-weight:700; margin-right:6px; }
+    .exp-empty{ font-size:10pt; color:#888; font-style:italic; }
+    @page{ margin:18mm; }
+  }
+</style>
+</head>
+<body>
+<div id="shell">
+  <header class="topbar">
+    <div class="brand-row">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2 L21 12 L12 22 L3 12 Z" stroke="#FBF8EF" stroke-width="1.8" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="3.1" fill="#B9924A"/>
+        </svg>
+      </div>
+      <div>
+        <div class="brand">Registo<span class="dot">.</span>MTG</div>
+        <div class="sub">Storm Crew — Pauper</div>
+      </div>
+    </div>
+    <div class="head-actions" id="head-actions"></div>
+  </header>
+  <main id="main"></main>
+  <button class="fab" id="fab" onclick="fabAction()"></button>
+  <nav class="tabbar" id="tabbar"></nav>
+  <div class="toast" id="toast"></div>
+</div>
+<div id="modal-root"></div>
+<div id="sb-export-sheet"></div>
+
+<script>
+/* ---------- estado ---------- */
+let state = {
+  tab: 'decks',
+  decks: [],
+  tournaments: [],
+  quickMatches: [],
+  loaded: false
+};
+
+const uid = () => Math.random().toString(36).slice(2,10);
+const todayISO = () => new Date().toISOString().slice(0,10);
+const fmtDate = (iso) => {
+  const d = new Date(iso+'T00:00:00');
+  return d.toLocaleDateString('pt-PT', {day:'2-digit', month:'short'});
+};
+const esc = (s) => (s||'').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* ---------- ícones (SVG lineares, escalam com font-size via 1em) ---------- */
+const ICON_PATHS = {
+  cards: '<rect x="3" y="7" width="14" height="14" rx="2"/><path d="M7 7V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-2"/>',
+  bar: '<path d="M4 20V10M10 20V4M16 20V13"/>',
+  edit: '<path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/>',
+  book: '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>',
+  cloud: '<path d="M17.5 19H9a5 5 0 1 1 1.5-9.8A6 6 0 0 1 22 12.5 4.5 4.5 0 0 1 17.5 19Z"/>',
+  trophy: '<path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z"/><path d="M17 5h2a2 2 0 0 1 2 2 4 4 0 0 1-4 4M7 5H5a2 2 0 0 0-2 2 4 4 0 0 0 4 4"/>',
+  store: '<path d="M3 9l1-5h16l1 5"/><path d="M4 9v10a1 1 0 0 0 1 1h4v-6h6v6h4a1 1 0 0 0 1-1V9"/><path d="M3 9h18"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.4 1.4M17.6 17.6 19 19M5 19l1.4-1.4M17.6 6.4 19 5"/>',
+  moon: '<path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/>',
+  info: '<circle cx="12" cy="12" r="9"/><path d="M12 16v-5"/><path d="M12 8h.01"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
+  check: '<path d="M20 6 9 17l-5-5"/>',
+  clipboard: '<rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 11h6M9 15h6"/>',
+  x: '<path d="M18 6 6 18M6 6l12 12"/>',
+};
+function ICON(name, extraClass){
+  const p = ICON_PATHS[name] || '';
+  return `<svg class="ico${extraClass? ' '+extraClass:''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+}
+
+/* ---------- persistência (usa window.storage dentro do Claude; localStorage fora dele) ---------- */
+const hasClaudeStorage = (typeof window.storage !== 'undefined') && window.storage && typeof window.storage.get === 'function';
+async function storageGet(key){
+  if(hasClaudeStorage){
+    try{ return await window.storage.get(key); }
+    catch(e){ /* cai para localStorage abaixo */ }
+  }
+  try{
+    const v = localStorage.getItem('mtglog:'+key);
+    return v!==null ? {key, value:v} : null;
+  }catch(e){ return null; }
+}
+async function storageSet(key, value){
+  if(hasClaudeStorage){
+    try{ return await window.storage.set(key, value); }
+    catch(e){ /* cai para localStorage abaixo */ }
+  }
+  try{ localStorage.setItem('mtglog:'+key, value); return {key, value}; }
+  catch(e){ return null; }
+}
+async function loadAll(){
+  try{ const d = await storageGet('decks'); state.decks = d ? JSON.parse(d.value) : []; }
+  catch(e){ state.decks = []; }
+  try{ const t = await storageGet('tournaments'); state.tournaments = t ? JSON.parse(t.value) : []; }
+  catch(e){ state.tournaments = []; }
+  try{ const q = await storageGet('quickMatches'); state.quickMatches = q ? JSON.parse(q.value) : []; }
+  catch(e){ state.quickMatches = []; }
+  state.loaded = true;
+  render();
+}
+async function saveDecks(){ try{ await storageSet('decks', JSON.stringify(state.decks)); } catch(e){ console.error(e); } }
+async function saveTournaments(){ try{ await storageSet('tournaments', JSON.stringify(state.tournaments)); } catch(e){ console.error(e); } }
+async function saveQuick(){ try{ await storageSet('quickMatches', JSON.stringify(state.quickMatches)); } catch(e){ console.error(e); } }
+
+/* ---------- helpers de dados ---------- */
+function deckById(id){ return state.decks.find(d=>d.id===id); }
+function parseDeckList(text){
+  if(!text) return [];
+  const rows = text.split('\n').map(l=>l.trim()).filter(Boolean).map(line=>{
+    line = line.replace(/^[-*•]\s*/, '');
+    let m = line.match(/^(\d+)\s*[xX]?\s+(.+)$/);
+    if(m) return {qty: parseInt(m[1],10), name: m[2].trim()};
+    m = line.match(/^(.+?)\s*[xX]\s*(\d+)\)?$/);
+    if(m) return {qty: parseInt(m[2],10), name: m[1].replace(/\(\s*$/,'').trim()};
+    return {qty: 1, name: line};
+  });
+  // junta linhas repetidas da mesma carta, somando as quantidades
+  const merged = {};
+  const order = [];
+  rows.forEach(r=>{
+    const key = r.name.toLowerCase();
+    if(!merged[key]){ merged[key] = {name: r.name, qty: 0}; order.push(key); }
+    merged[key].qty += r.qty;
+  });
+  return order.map(k=>merged[k]);
+}
+function normalizeChanges(changes){
+  if(!changes) return {outs:[], ins:[]};
+  if(Array.isArray(changes)){
+    return {
+      outs: changes.map(c=>({name:c.out, qty:c.qty})),
+      ins: changes.map(c=>({name:c.in, qty:c.qty}))
+    };
+  }
+  return {outs: changes.outs||[], ins: changes.ins||[]};
+}
+function sbChangeCount(changes){
+  const n = normalizeChanges(changes);
+  return n.outs.length + n.ins.length;
+}
+function gamesLabel(m){
+  if(m.gf==null && m.ga==null && m.gd==null) return '';
+  const parts = [m.gf||0, m.ga||0];
+  if(m.gd) parts.push(m.gd);
+  return parts.join('-') + ' em jogos';
+}
+function deckLabel(deckId, fallback){
+  const d = deckById(deckId);
+  if(d) return d.name;
+  if(fallback) return fallback;
+  return 'Sem deck';
+}
+function allRounds(){
+  const rows = [];
+  state.tournaments.forEach(t=>{
+    t.rounds.forEach(r=>{
+      rows.push({...r, store:t.store, format:t.format, deckId:t.deckId, deckLabel:deckLabel(t.deckId, t.deck), source:'paper', tournamentId:t.id, date:t.date});
+    });
+  });
+  return rows;
+}
+function allMatches(){
+  return [...allRounds(), ...state.quickMatches.map(m=>({...m, deckLabel:deckLabel(m.deckId), source:'mtgo'}))];
+}
+function pct(w,total){ return total? Math.round((w/total)*100) : 0; }
+function recordOf(list){
+  const w = list.filter(m=>m.result==='W').length;
+  const l = list.filter(m=>m.result==='L').length;
+  const d = list.filter(m=>m.result==='D').length;
+  return {w,l,d,total:list.length, pct: pct(w, w+l)};
+}
+function groupBy(list, key){
+  const map = {};
+  list.forEach(m=>{
+    const k = m[key] || '—';
+    (map[k] = map[k]||[]).push(m);
+  });
+  return map;
+}
+function activeTournament(){ return state.tournaments.find(t=>t.status==='open'); }
+function knownStores(){ return [...new Set(state.tournaments.map(t=>t.store).filter(Boolean))]; }
+function knownArchetypes(){
+  const s = new Set();
+  allMatches().forEach(m=> m.opponent && s.add(m.opponent));
+  return [...s];
+}
+
+/* ---------- tema (claro/escuro) ---------- */
+let theme = 'light';
+async function loadTheme(){
+  try{
+    const t = await storageGet('theme');
+    theme = t ? t.value : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  }catch(e){
+    theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+  }
+  applyTheme();
+}
+function applyTheme(){
+  document.documentElement.setAttribute('data-theme', theme);
+  renderHeadActions();
+}
+async function toggleTheme(){
+  theme = theme==='dark' ? 'light' : 'dark';
+  applyTheme();
+  try{ await storageSet('theme', theme); }catch(e){}
+}
+function renderHeadActions(){
+  const el = document.getElementById('head-actions');
+  if(!el) return;
+  el.innerHTML = `
+    <button class="icon-btn" onclick="toggleTheme()" title="Alternar tema">${ICON(theme==='dark'?'sun':'moon')}</button>
+    <button class="icon-btn" onclick="openModalAbout()">${ICON('info')}</button>
+  `;
+}
+function openModalAbout(){
+  document.getElementById('modal-root').innerHTML = `
+    <div class="modal-bg" onclick="if(event.target===this) closeModal()">
+      <div class="modal">
+        <button class="close-x" onclick="closeModal()">&#10005;</button>
+        <h3>Sobre</h3>
+        <div class="about-row"><span class="k">App</span><strong>Registo.MTG</strong></div>
+        <div class="about-row"><span class="k">Versão</span><strong>1.4</strong></div>
+        <div class="about-row"><span class="k">Equipa</span><strong>Storm Crew</strong></div>
+        <div class="about-row"><span class="k">Formato</span><strong>Pauper</strong></div>
+        <div class="about-row"><span class="k">Dados</span><strong>guardados neste dispositivo</strong></div>
+        <div class="modal-actions">
+          <button class="btn-primary" onclick="closeModal()">Fechar</button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+/* ---------- toast ---------- */
+let toastTimer = null;
+function showToast(msg){
+  const el = document.getElementById('toast');
+  if(!el) return;
+  el.innerHTML = `${ICON('check')}<span>${esc(msg)}</span>`;
+  el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=> el.classList.remove('show'), 2200);
+}
+
+/* ---------- confirmação (substitui confirm() nativo) ---------- */
+let pendingConfirmAction = null;
+function showConfirm(message, onConfirm, confirmLabel){
+  pendingConfirmAction = onConfirm;
+  document.getElementById('modal-root').innerHTML = `
+    <div class="modal-bg" onclick="if(event.target===this) cancelConfirm()">
+      <div class="modal">
+        <button class="close-x" onclick="cancelConfirm()">&#10005;</button>
+        <h3>Confirmar</h3>
+        <div class="fine" style="font-size:0.85rem; color:var(--ink-soft); margin-bottom:4px;">${esc(message)}</div>
+        <div class="modal-actions">
+          <button class="btn-secondary" onclick="cancelConfirm()">Cancelar</button>
+          <button class="btn-danger" style="flex:1; padding:13px;" onclick="confirmConfirm()">${esc(confirmLabel||'Confirmar')}</button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+function cancelConfirm(){ pendingConfirmAction = null; closeModal(); }
+function confirmConfirm(){
+  const fn = pendingConfirmAction;
+  pendingConfirmAction = null;
+  closeModal();
+  if(fn) fn();
+}
+
+/* ---------- FAB (novo registo, acessível em todos os separadores) ---------- */
+function fabAction(){
+  if(state.decks.length===0){ setTab('decks'); return; }
+  openModalChooseType();
+}
+function renderFab(){
+  const fab = document.getElementById('fab');
+  if(!fab) return;
+  fab.innerHTML = ICON('plus');
+}
+
+/* ---------- mini gráfico de anel (win rate) ---------- */
+function ringChart(pct, size, label){
+  const s = size || 64;
+  const stroke = Math.max(4, Math.round(s*0.11));
+  const r = (s - stroke)/2;
+  const c = 2*Math.PI*r;
+  const dash = (pct/100) * c;
+  return `
+    <svg width="${s}" height="${s}" viewBox="0 0 ${s} ${s}" style="flex-shrink:0;">
+      <circle cx="${s/2}" cy="${s/2}" r="${r}" fill="none" stroke="var(--bg-alt)" stroke-width="${stroke}"/>
+      <circle cx="${s/2}" cy="${s/2}" r="${r}" fill="none" stroke="var(--win)" stroke-width="${stroke}"
+        stroke-linecap="round" stroke-dasharray="${dash} ${c}"
+        transform="rotate(-90 ${s/2} ${s/2})"/>
+      <text x="50%" y="52%" text-anchor="middle" dominant-baseline="middle"
+        font-family="Fraunces, serif" font-weight="600" font-size="${s*0.24}" fill="var(--ink)">${label!=null?label:pct+'%'}</text>
+    </svg>
+  `;
+}
+const TABS = [
+  {id:'decks', label:'Decks', ic: ICON('cards')},
+  {id:'stats', label:'Stats', ic: ICON('bar')},
+  {id:'registo', label:'Registo', ic: ICON('edit')},
+  {id:'sbguide', label:'Guia SB', ic: ICON('book')},
+];
+function setTab(id){
+  state.tab = id;
+  if(id!=='sbguide') sbGuideNav = {level:'decks', deck:null, archetype:null};
+  render();
+}
+
+/* ---------- render raiz ---------- */
+function render(){
+  renderTabbar();
+  renderFab();
+  const main = document.getElementById('main');
+  if(!state.loaded){ main.innerHTML = `<div class="empty">A carregar registos…</div>`; return; }
+  if(state.tab==='decks') main.innerHTML = viewDecks();
+  if(state.tab==='stats') main.innerHTML = viewStats();
+  if(state.tab==='registo') main.innerHTML = viewRegisto();
+  if(state.tab==='sbguide') main.innerHTML = viewSbGuide();
+}
+function renderTabbar(){
+  const bar = document.getElementById('tabbar');
+  bar.innerHTML = `
+    <button class="sidebar-cta" onclick="fabAction()">${ICON('plus')}Novo registo</button>
+    ${TABS.map(t=>`
+    <button class="${state.tab===t.id?'active':''}" onclick="setTab('${t.id}')">
+      <span class="ic">${t.ic}</span>${t.label}
+    </button>`).join('')}
+  `;
+}
+
+/* ---------- VIEW: MEUS DECKS ---------- */
+function viewDecks(){
+  const decks = [...state.decks].sort((a,b)=> a.name.localeCompare(b.name));
+  if(decks.length===0){
+    return `
+      <h2 class="section-title"><span class="num">${ICON('cards')}</span>Meus Decks</h2>
+      <div class="onboard-card">
+        <div class="icon-circle">${ICON('cards')}</div>
+        <h3>Começa pelos teus decks</h3>
+        <p>Adiciona o mainboard e o sideboard de cada deck que jogas. Depois é só escolhê-lo quando abrires um torneio ou registares um jogo MTGO — e as estatísticas e o guia de sideboard constroem-se sozinhos a partir daí.</p>
+        <button class="btn-primary" onclick="openModalDeck()">Adicionar o primeiro deck</button>
+      </div>
+    `;
+  }
+  return `
+    <h2 class="section-title"><span class="num">${ICON('cards')}</span>Meus Decks</h2>
+    <button class="btn-primary" onclick="openModalDeck()">Adicionar deck</button>
+    <div style="height:16px"></div>
+    ${decks.map(d=>{
+        const matches = allMatches().filter(m=>m.deckId===d.id);
+        const rec = recordOf(matches);
+        return `
+        <div class="deck-card">
+          <div class="top">
+            <div>
+              <div class="dname">${esc(d.name)}</div>
+              <div class="dmeta">${rec.total? rec.w+'-'+rec.l+(rec.d?('-'+rec.d):'')+' · '+rec.pct+'% win' : 'sem jogos registados'}</div>
+            </div>
+          </div>
+          <button class="toggle-list" onclick="toggleDeckList('${d.id}')">Ver lista</button>
+          <div id="dl-${d.id}" style="display:none">
+            <div class="deck-list-view"><strong>Mainboard</strong><br>${esc(d.main)||'—'}</div>
+            <div class="deck-list-view"><strong>Sideboard</strong><br>${esc(d.sb)||'—'}</div>
+          </div>
+          <div class="actions">
+            <button class="btn-small" onclick="openModalDeck('${d.id}')">Editar</button>
+            <button class="btn-danger" onclick="removeDeck('${d.id}')">Remover</button>
+          </div>
+        </div>`;
+      }).join('')
+    }
+  `;
+}
+function toggleDeckList(id){
+  const el = document.getElementById('dl-'+id);
+  el.style.display = el.style.display==='none' ? 'block' : 'none';
+}
+
+/* ---------- VIEW: ESTATÍSTICAS ---------- */
+let statsPeriod = 'total'; // 'total' | '90'
+let statsSource = 'all';   // 'all' | 'torneio' | 'mtgo'
+let statsDeck = 'all';     // 'all' | deckId
+function cutoffISO(days){
+  const d = new Date();
+  d.setDate(d.getDate() - days);
+  return d.toISOString().slice(0,10);
+}
+function setStatsPeriod(p){ statsPeriod = p; render(); }
+function setStatsSource(s){ statsSource = s; render(); }
+function setStatsDeck(id){ statsDeck = id; render(); }
+
+function viewStats(){
+  let matches = allMatches();
+  if(statsPeriod==='90'){ const c = cutoffISO(90); matches = matches.filter(m=> m.date >= c); }
+  if(statsSource==='mtgo') matches = matches.filter(m=> m.source==='mtgo');
+  if(statsSource==='torneio') matches = matches.filter(m=> m.source==='paper');
+  if(statsDeck!=='all') matches = matches.filter(m=> m.deckId===statsDeck);
+
+  const overall = recordOf(matches);
+  const papel = matches.filter(m=>m.source==='paper').length;
+  const mtgo = matches.filter(m=>m.source==='mtgo').length;
+
+  const byDeck = groupBy(matches, 'deckLabel');
+  const deckRows = Object.entries(byDeck)
+    .map(([name, list])=>({name, rec: recordOf(list)}))
+    .sort((a,b)=> b.rec.total - a.rec.total);
+
+  return `
+    <h2 class="section-title"><span class="num">1</span>Filtros</h2>
+    <div class="card">
+      <label style="margin-top:0">Período</label>
+      <div class="seg">
+        <button type="button" class="${statsPeriod==='total'?'active W':''}" onclick="setStatsPeriod('total')">Total</button>
+        <button type="button" class="${statsPeriod==='90'?'active W':''}" onclick="setStatsPeriod('90')">90 dias</button>
+      </div>
+      <label>Origem</label>
+      <div class="seg">
+        <button type="button" class="${statsSource==='all'?'active W':''}" onclick="setStatsSource('all')">Tudo</button>
+        <button type="button" class="${statsSource==='torneio'?'active W':''}" onclick="setStatsSource('torneio')">Torneios</button>
+        <button type="button" class="${statsSource==='mtgo'?'active W':''}" onclick="setStatsSource('mtgo')">MTGO</button>
+      </div>
+      <label for="stats-deck-filter">Deck</label>
+      <select id="stats-deck-filter" onchange="setStatsDeck(this.value)">
+        <option value="all" ${statsDeck==='all'?'selected':''}>Todos os decks</option>
+        ${state.decks.map(d=>`<option value="${d.id}" ${statsDeck===d.id?'selected':''}>${esc(d.name)}</option>`).join('')}
+      </select>
+    </div>
+
+    <h2 class="section-title" style="margin-top:22px"><span class="num">2</span>Resultado total</h2>
+    <div class="stat-grid">
+      <div class="stat-box">
+        <div class="label">Win rate${statsPeriod==='90'?' (90 dias)':''}</div>
+        <div class="ring-wrap" style="margin-top:4px;">
+          ${ringChart(overall.total? overall.pct : 0, 58)}
+          <div class="ring-num">
+            <span class="fine" style="font-size:0.74rem;">${overall.w}V · ${overall.l}D · ${overall.d}E</span>
+          </div>
+        </div>
+      </div>
+      <div class="stat-box">
+        <div class="label">Partidas registadas</div>
+        <div class="value">${overall.total}</div>
+        <div class="sub">${papel} papel · ${mtgo} MTGO</div>
+      </div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:22px"><span class="num">3</span>Por deck</h2>
+    ${deckRows.length===0 ? `<div class="card"><div class="empty"><span class="glyph">${ICON('cards')}</span>Sem jogos para os filtros escolhidos.</div></div>` :
+      deckRows.map((dr, i)=>{
+        const key = 'stat-deck-'+i;
+        const list = byDeck[dr.name];
+        const byArch = groupBy(list, 'opponent');
+        const archRows = Object.entries(byArch)
+          .map(([name, l])=>({name, rec: recordOf(l)}))
+          .sort((a,b)=> b.rec.total - a.rec.total);
+        const deckRounds = list.filter(m=>m.source==='paper');
+        const byStore = groupBy(deckRounds, 'store');
+        const storeRows = Object.entries(byStore)
+          .map(([name, l])=>({name, rec: recordOf(l)}))
+          .sort((a,b)=> b.rec.total - a.rec.total);
+        return `
+        <div class="card" style="padding:0; overflow:hidden;">
+          <button onclick="toggleStatsDeck('${key}')" style="width:100%; background:none; padding:14px 16px; display:flex; align-items:center; justify-content:space-between; text-align:left;">
+            <span>
+              <span class="dname" style="font-family:'Fraunces',serif; font-weight:600; font-size:1rem;">${esc(dr.name)}</span><br>
+              <span class="fine">${dr.rec.total} partida${dr.rec.total===1?'':'s'} · ${dr.rec.w}-${dr.rec.l}${dr.rec.d?('-'+dr.rec.d):''}</span>
+            </span>
+            <span style="display:flex; align-items:center; gap:8px; flex-shrink:0;">
+              <span class="value win" style="font-size:1.3rem;">${dr.rec.total? dr.rec.pct+'%':'—'}</span>
+              <span id="${key}-arrow" class="fine" style="font-size:0.9rem;">&#9662;</span>
+            </span>
+          </button>
+          <div id="${key}" style="display:none; padding:0 16px 16px;">
+            <div class="aname" style="margin-top:6px">Vs. arquétipo</div>
+            <table class="ledger">
+              ${archRows.map(r=>`
+                <tr>
+                  <td>${esc(r.name)}</td>
+                  <td style="white-space:nowrap">${r.rec.w}-${r.rec.l}${r.rec.d?('-'+r.rec.d):''}</td>
+                  <td>${r.rec.pct}%<div class="pct-bar"><div style="width:${r.rec.pct}%"></div></div></td>
+                </tr>`).join('')}
+            </table>
+            <div class="aname" style="margin-top:16px">Por loja</div>
+            ${storeRows.length===0 ? `<div class="fine">Sem torneios de loja com este deck (nestes filtros).</div>` : `
+            <table class="ledger">
+              ${storeRows.map(r=>`
+                <tr>
+                  <td>${esc(r.name)}</td>
+                  <td style="white-space:nowrap">${r.rec.w}-${r.rec.l}${r.rec.d?('-'+r.rec.d):''}</td>
+                  <td>${r.rec.pct}%<div class="pct-bar"><div style="width:${r.rec.pct}%"></div></div></td>
+                </tr>`).join('')}
+            </table>`}
+          </div>
+        </div>`;
+      }).join('')
+    }
+  `;
+}
+function toggleStatsDeck(key){
+  const el = document.getElementById(key);
+  const arrow = document.getElementById(key+'-arrow');
+  const open = el.style.display !== 'none';
+  el.style.display = open ? 'none' : 'block';
+  arrow.innerHTML = open ? '&#9662;' : '&#9652;';
+}
+
+/* ---------- VIEW: REGISTO (torneio + mtgo unificados) ---------- */
+function registoHistory(){
+  const items = [];
+  state.tournaments.filter(t=>t.status==='closed').forEach(t=> items.push({type:'torneio', date:t.date, data:t}));
+  state.quickMatches.forEach(m=> items.push({type:'mtgo', date:m.date, data:m}));
+  return items.sort((a,b)=> b.date.localeCompare(a.date));
+}
+function viewRegisto(){
+  const active = activeTournament();
+
+  if(state.decks.length===0){
+    return `
+      <h2 class="section-title"><span class="num">${ICON('edit')}</span>Registo</h2>
+      <div class="onboard-card">
+        <div class="icon-circle">${ICON('cards')}</div>
+        <h3>Falta um deck</h3>
+        <p>Precisas de ter pelo menos um deck guardado em "Meus Decks" antes de registares um torneio ou um jogo MTGO.</p>
+        <button class="btn-primary" onclick="setTab('decks')">Ir para Meus Decks</button>
+      </div>
+    `;
+  }
+
+  if(active){
+    const rec = recordOf(active.rounds);
+    const deck = deckById(active.deckId);
+    return `
+      <h2 class="section-title"><span class="num">${ICON('edit')}</span>Registo</h2>
+      <div class="ticket">
+        <span class="stamp">ABERTO</span>
+        <div class="store">${esc(active.store)}</div>
+        <div class="meta">${fmtDate(active.date)} · ${esc(deckLabel(active.deckId, active.deck))} · ${esc(active.format||'Pauper')}</div>
+        <div class="record">
+          <span>Registo: <strong>${rec.w}-${rec.l}${rec.d?('-'+rec.d):''}</strong></span>
+          <span>${rec.total? rec.pct+'% win':'—'}</span>
+        </div>
+        ${deck ? `<button class="toggle-list" onclick="toggleDeckList('active-t')">Ver lista do deck</button>
+          <div id="dl-active-t" style="display:none">
+            <div class="deck-list-view"><strong>Mainboard</strong><br>${esc(deck.main)||'—'}</div>
+            <div class="deck-list-view"><strong>Sideboard</strong><br>${esc(deck.sb)||'—'}</div>
+          </div>` : ''}
+      </div>
+
+      <h2 class="section-title"><span class="num">${active.rounds.length+1}</span>Rondas</h2>
+      <div class="card">
+        ${active.rounds.length===0 ? `<div class="empty">Ainda sem rondas. Adiciona a primeira.</div>` :
+          active.rounds.map((r)=>`
+            <div class="round-row ${r.result}">
+              <div class="rn">R${r.round}</div>
+              <div class="opp">${esc(r.opponent)}${gamesLabel(r) ? `<br><span class="fine">${gamesLabel(r)}</span>`:''}${sbChangeCount(r.changes)>0? `<br><span class="fine">${sbChangeCount(r.changes)} troca(s) de SB registada(s)</span>`:''}</div>
+              <span class="badge ${r.result}">${r.result}</span>
+              <button class="del-x" onclick="removeRound('${active.id}','${r.id}')">remover</button>
+            </div>
+          `).join('')
+        }
+      </div>
+
+      <button class="btn-primary" onclick="openModalNewRound('${active.id}')">Adicionar ronda</button>
+      <div style="height:12px"></div>
+      <button class="btn-danger" style="width:100%" onclick="closeTournament('${active.id}')">Fechar torneio</button>
+    `;
+  }
+
+  const history = registoHistory();
+  return `
+    <h2 class="section-title"><span class="num">${ICON('edit')}</span>Registo</h2>
+    <button class="btn-primary" onclick="openModalChooseType()">Novo registo</button>
+
+    <h2 class="section-title" style="margin-top:24px"><span class="num">${ICON('clipboard')}</span>Histórico</h2>
+    ${history.length===0 ? `<div class="card"><div class="empty">Ainda sem torneios ou jogos registados.</div></div>` :
+      history.map(item=>{
+        if(item.type==='torneio'){
+          const t = item.data;
+          const rec = recordOf(t.rounds);
+          return `<div class="ticket" style="margin-bottom:12px">
+            <span class="stamp">TORNEIO</span>
+            <div class="store">${esc(t.store)}</div>
+            <div class="meta">${fmtDate(t.date)} · ${esc(deckLabel(t.deckId, t.deck))} · ${esc(t.format||'Pauper')}</div>
+            <div class="record">
+              <span>Registo: <strong>${rec.w}-${rec.l}${rec.d?('-'+rec.d):''}</strong></span>
+              <span>${rec.total? rec.pct+'% win':'—'}</span>
+            </div>
+            <button class="del-x" style="margin-top:10px" onclick="removeTournament('${t.id}')">remover torneio</button>
+          </div>`;
+        } else {
+          const m = item.data;
+          return `<div class="card" style="padding:12px 16px;">
+            <div class="round-row ${m.result}" style="border-bottom:none; padding:10px;">
+              <div class="rn" style="font-size:0.6rem;">MTGO</div>
+              <div class="opp">${fmtDate(m.date)} · <span class="fine">${esc(deckLabel(m.deckId))}</span> vs ${esc(m.opponent)}${m.note?`<br><span class="fine">${esc(m.note)}</span>`:''}${(m.gf!=null && m.ga!=null)?`<br><span class="fine">${m.gf}-${m.ga} em jogos</span>`:''}${sbChangeCount(m.changes)>0? `<br><span class="fine">${sbChangeCount(m.changes)} troca(s) de SB registada(s)</span>`:''}</div>
+              <span class="badge ${m.result}">${m.result}</span>
+              <button class="del-x" onclick="removeQuick('${m.id}')">remover</button>
+            </div>
+          </div>`;
+        }
+      }).join('')
+    }
+  `;
+}
+function openModalChooseType(){
+  document.getElementById('modal-root').innerHTML = `
+    <div class="modal-bg" onclick="if(event.target===this) closeModal()">
+      <div class="modal">
+        <button class="close-x" onclick="closeModal()">&#10005;</button>
+        <h3>Novo registo</h3>
+        <div class="fine" style="margin-bottom:14px;">O que estás a registar?</div>
+        <button class="btn-primary" style="margin-bottom:10px;" onclick="closeModal(); openModalNewTournament();">${ICON('trophy')} Torneio de loja</button>
+        <button class="btn-primary" onclick="closeModal(); openModalNewQuick();">${ICON('cloud')} Jogo MTGO</button>
+      </div>
+    </div>
+  `;
+}
+
+/* ---------- VIEW: GUIA SB (derivado das trocas registadas) ---------- */
+/* ---------- VIEW: GUIA SB (navegação: decks -> arquétipos -> guia) ---------- */
+let sbGuideNav = {level:'decks', deck:null, archetype:null};
+function setSbGuideView(level, deck, archetype){
+  sbGuideNav = {level, deck: deck!==undefined?deck:sbGuideNav.deck, archetype: archetype!==undefined?archetype:sbGuideNav.archetype};
+  render();
+}
+/* ---------- plano de sideboard recomendado (baseado em vitórias/derrotas reais) ---------- */
+function computeSbPlan(aMatches){
+  function buildCandidates(kind){
+    // agrupa por carta -> por quantidade usada -> registo V/D/E
+    const byCard = {};
+    aMatches.forEach(m=>{
+      const n = normalizeChanges(m.changes);
+      n[kind].forEach(c=>{
+        const qty = Number(c.qty) || 1;
+        if(!byCard[c.name]) byCard[c.name] = {};
+        if(!byCard[c.name][qty]) byCard[c.name][qty] = {wins:0, losses:0, draws:0, total:0};
+        const bucket = byCard[c.name][qty];
+        bucket.total++;
+        if(m.result==='W') bucket.wins++;
+        else if(m.result==='L') bucket.losses++;
+        else bucket.draws++;
+      });
+    });
+    // para cada carta, escolhe a quantidade com melhor registo (nunca soma quantidades diferentes)
+    const candidates = [];
+    Object.entries(byCard).forEach(([name, qtyMap])=>{
+      let best = null;
+      Object.entries(qtyMap).forEach(([qtyStr, bucket])=>{
+        const qty = Number(qtyStr);
+        const net = bucket.wins - bucket.losses;
+        if(!best || net>best.net || (net===best.net && bucket.total>best.total)){
+          best = {qty, net, total:bucket.total, wins:bucket.wins, losses:bucket.losses, draws:bucket.draws};
+        }
+      });
+      candidates.push({name, qty:best.qty, score:best.net, wins:best.wins, losses:best.losses, draws:best.draws, samples:best.total});
+    });
+    candidates.sort((a,b)=> b.score - a.score || b.samples - a.samples);
+    return candidates;
+  }
+  let outs = buildCandidates('outs');
+  let ins = buildCandidates('ins');
+  const sumQty = (list)=> list.reduce((s,c)=>s+c.qty,0);
+  const trimWorst = (list)=>{
+    if(list.length===0) return;
+    const worst = list[list.length-1];
+    worst.qty -= 1;
+    if(worst.qty<=0) list.pop();
+  };
+  let guard = 0;
+  while(guard++ < 300){
+    const so = sumQty(outs), si = sumQty(ins);
+    if(so<=15 && si<=15 && so===si) break;
+    if(outs.length===0 && ins.length===0) break;
+    if(so>si) trimWorst(outs);
+    else if(si>so) trimWorst(ins);
+    else { trimWorst(outs); trimWorst(ins); }
+  }
+  return {outs, ins};
+}
+/* ---------- exportar guia de sideboard (folha imprimível/PDF) ---------- */
+function exportSbGuide(deckName){
+  const matches = allMatches().filter(m=> sbChangeCount(m.changes)>0 && m.deckLabel===deckName);
+  const byArch = groupBy(matches, 'opponent');
+  const archNames = Object.keys(byArch).sort((a,b)=> byArch[b].length - byArch[a].length);
+  const dateStr = new Date().toLocaleDateString('pt-PT', {day:'2-digit', month:'long', year:'numeric'});
+
+  let html = `
+    <div class="exp-header">
+      <div class="exp-title">Guia de Sideboard</div>
+      <div class="exp-sub">${esc(deckName)} — Storm Crew · Pauper</div>
+      <div class="exp-date">Gerado em ${dateStr}</div>
+    </div>
+  `;
+  archNames.forEach(arch=>{
+    const aMatches = byArch[arch];
+    const {outs, ins} = computeSbPlan(aMatches);
+    const total = outs.reduce((s,c)=>s+c.qty,0);
+    html += `
+      <div class="exp-arch">
+        <div class="exp-arch-title">vs. ${esc(arch)} <span class="exp-arch-count">${total} carta${total===1?'':'s'} trocadas · ${aMatches.length} jogo${aMatches.length===1?'':'s'} registados</span></div>
+        <div class="exp-cols">
+          <div class="exp-col exp-col-out">
+            <div class="exp-col-title">Sai do mainboard</div>
+            ${outs.length? `<ul>${outs.map(o=>`<li><span class="exp-qty">${o.qty}x</span> ${esc(o.name)}</li>`).join('')}</ul>` : `<div class="exp-empty">Sem dados suficientes.</div>`}
+          </div>
+          <div class="exp-col exp-col-in">
+            <div class="exp-col-title">Entra do sideboard</div>
+            ${ins.length? `<ul>${ins.map(o=>`<li><span class="exp-qty">${o.qty}x</span> ${esc(o.name)}</li>`).join('')}</ul>` : `<div class="exp-empty">Sem dados suficientes.</div>`}
+          </div>
+        </div>
+      </div>
+    `;
+  });
+  document.getElementById('sb-export-sheet').innerHTML = html;
+  window.print();
+}
+
+function viewSbGuide(){
+  const matches = allMatches().filter(m=> sbChangeCount(m.changes) > 0);
+  if(matches.length===0){
+    return `
+      <h2 class="section-title"><span class="num">${ICON('book')}</span>Guia de Sideboard</h2>
+      <div class="empty"><span class="glyph">${ICON('book')}</span>Ainda sem trocas de sideboard registadas.<br>Regista as trocas que fazes em cada jogo (em Torneio ou MTGO) para começares a construir aqui o teu guia por deck e por matchup.</div>
+    `;
+  }
+  const byDeck = groupBy(matches, 'deckLabel');
+
+  // nível 3: guia para deck+arquétipo específico
+  if(sbGuideNav.level==='detail' && byDeck[sbGuideNav.deck]){
+    const aMatches = byDeck[sbGuideNav.deck].filter(m=>m.opponent===sbGuideNav.archetype);
+    if(aMatches.length>0){
+      const {outs, ins} = computeSbPlan(aMatches);
+      const total = outs.reduce((s,c)=>s+c.qty,0);
+      const recLine = (r)=>{
+        const bits = [];
+        if(r.wins) bits.push(r.wins+'V');
+        if(r.losses) bits.push(r.losses+'D');
+        if(r.draws) bits.push(r.draws+'E');
+        return bits.join('-') + ` (${r.samples} jogo${r.samples===1?'':'s'} com ${r.qty}x)`;
+      };
+      return `
+        <button class="toggle-list" style="margin-bottom:10px" onclick="setSbGuideView('archetypes')">&#8592; ${esc(sbGuideNav.deck)}</button>
+        <h2 class="section-title"><span class="num">${ICON('book')}</span>vs. ${esc(sbGuideNav.archetype)}</h2>
+        <div class="fine" style="margin:-6px 2px 4px;">${aMatches.length} jogo(s) registados com trocas · plano recomendado com base no que ganhaste/perdeste</div>
+        <div class="fine" style="margin:0 2px 14px;">${total} carta${total===1?'':'s'} trocadas (máx. 15, saída = entrada)</div>
+        <div class="card">
+          <div class="archetype-block" style="margin-bottom:0;">
+            ${outs.length? `<div class="fine" style="margin-bottom:4px;">Sai do main:</div>${outs.map(r=>`
+              <div class="change-row" style="align-items:flex-start;">
+                <span class="qtytag">${r.qty}x</span>
+                <span class="out" style="display:flex; flex-direction:column;">${esc(r.name)}<span class="fine" style="font-weight:400;">${recLine(r)}</span></span>
+              </div>`).join('')}` : `<div class="fine">Sem cartas com registo suficiente para recomendar.</div>`}
+            ${ins.length? `<div class="fine" style="margin:${outs.length?'10px':'0'} 0 4px;">Entra do sideboard:</div>${ins.map(r=>`
+              <div class="change-row" style="align-items:flex-start;">
+                <span class="qtytag">${r.qty}x</span>
+                <span class="in" style="display:flex; flex-direction:column;">${esc(r.name)}<span class="fine" style="font-weight:400;">${recLine(r)}</span></span>
+              </div>`).join('')}` : `<div class="fine">Sem cartas com registo suficiente para recomendar.</div>`}
+          </div>
+        </div>
+      `;
+    }
+    sbGuideNav = {level:'archetypes', deck:sbGuideNav.deck, archetype:null};
+  }
+
+  // nível 2: arquétipos de um deck
+  if(sbGuideNav.level==='archetypes' && byDeck[sbGuideNav.deck]){
+    const dMatches = byDeck[sbGuideNav.deck];
+    const byArch = groupBy(dMatches, 'opponent');
+    const archRows = Object.entries(byArch)
+      .map(([name, l])=>({name, count:l.length}))
+      .sort((a,b)=> b.count - a.count);
+    return `
+      <button class="toggle-list" style="margin-bottom:10px" onclick="setSbGuideView('decks')">&#8592; Decks</button>
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+        <h2 class="section-title" style="margin-bottom:4px;"><span class="num">${ICON('cards')}</span>${esc(sbGuideNav.deck)}</h2>
+      </div>
+      <div class="fine" style="margin:0 2px 14px;">Escolhe o arquétipo para ver o guia de sideboard</div>
+      <button class="btn-secondary" style="width:100%; margin-bottom:14px; display:flex; align-items:center; justify-content:center; gap:8px;" onclick="exportSbGuide('${esc(sbGuideNav.deck).replace(/'/g,"\\'")}')">${ICON('clipboard')} Exportar guia deste deck</button>
+      <div class="card" style="padding:2px 16px;">
+        ${archRows.map(a=>`
+          <button class="nav-row" onclick="setSbGuideView('detail', undefined, '${esc(a.name).replace(/'/g,"\\'")}')">
+            <span><span class="nr-title">${esc(a.name)}</span><br><span class="nr-sub">${a.count} jogo(s) com trocas</span></span>
+            <span class="chev">&#8250;</span>
+          </button>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  // nível 1: lista de decks
+  const deckRows = Object.entries(byDeck)
+    .map(([name, list])=>({name, count:list.length}))
+    .sort((a,b)=> b.count - a.count);
+  return `
+    <h2 class="section-title"><span class="num">${ICON('book')}</span>Guia de Sideboard</h2>
+    <div class="empty" style="padding:0 4px 18px; text-align:left; color:var(--ink-soft);">
+      Escolhe um deck para veres contra que arquétipos já registaste trocas de sideboard.
+    </div>
+    <div class="card" style="padding:2px 16px;">
+      ${deckRows.map(d=>`
+        <button class="nav-row" onclick="setSbGuideView('archetypes', '${esc(d.name).replace(/'/g,"\\'")}')">
+          <span><span class="nr-title">${esc(d.name)}</span><br><span class="nr-sub">${d.count} jogo(s) com trocas</span></span>
+          <span class="chev">&#8250;</span>
+        </button>
+      `).join('')}
+    </div>
+  `;
+}
+
+/* ---------- modal: DECKS ---------- */
+function openModalDeck(deckId){
+  const editing = deckId ? deckById(deckId) : null;
+  document.getElementById('modal-root').innerHTML = `
+    <div class="modal-bg" onclick="if(event.target===this) closeModal()">
+      <div class="modal">
+        <button class="close-x" onclick="closeModal()">&#10005;</button>
+        <h3>${editing? 'Editar deck' : 'Novo deck'}</h3>
+        <label for="d-name">Nome do deck</label>
+        <input id="d-name" placeholder="ex. UW Familiars" value="${editing? esc(editing.name):''}">
+
+        <label for="d-main">Mainboard</label>
+        <textarea id="d-main" rows="6" placeholder="4 Ninja of the Deep Hours&#10;4 Faerie Miscreant&#10;...">${editing? esc(editing.main):''}</textarea>
+
+        <label for="d-sb">Sideboard</label>
+        <textarea id="d-sb" rows="4" placeholder="2 Prismatic Strands&#10;3 Nihil Spellbomb&#10;...">${editing? esc(editing.sb):''}</textarea>
+
+        <div class="modal-actions">
+          <button class="btn-secondary" onclick="closeModal()">Cancelar</button>
+          <button class="btn-primary" onclick="submitDeck(${editing? `'${editing.id}'`:'null'})">Guardar</button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+function submitDeck(deckId){
+  const name = document.getElementById('d-name').value.trim();
+  if(!name){ document.getElementById('d-name').focus(); return; }
+  const main = document.getElementById('d-main').value;
+  const sb = document.getElementById('d-sb').value;
+  if(deckId){
+    const d = deckById(deckId);
+    d.name = name; d.main = main; d.sb = sb;
+  } else {
+    state.decks.push({id: uid(), name, main, sb, createdAt: todayISO()});
+  }
+  saveDecks();
+  closeModal();
+  render();
+  showToast(deckId ? 'Deck atualizado' : 'Deck guardado');
+}
+function removeDeck(deckId){
+  showConfirm('Remover este deck? O histórico de jogos associado mantém-se, mas deixa de estar ligado a um deck.', function(){
+    state.decks = state.decks.filter(d=>d.id!==deckId);
+    saveDecks();
+    render();
+    showToast('Deck removido');
+  }, 'Remover');
+}
+
+/* ---------- modais partilhados: trocas de SB (seletor de cartas do deck) ---------- */
+let changesDraft = {outs:[], ins:[]};
+let sbPickerDeckId = null;
+let sbReturnMode = null; // 'round' | 'quick'
+let roundModalTournamentId = null;
+let roundDraft = {opponent:'', gf:'', ga:'', gd:''};
+let quickDraft = {opponent:'', gf:'', ga:'', gd:'', date:'', note:'', deckId:''};
+
+function sbSummaryHtml(){
+  const outs = changesDraft.outs, ins = changesDraft.ins;
+  if(outs.length===0 && ins.length===0){
+    return `<div class="fine">Sem trocas de sideboard registadas para este jogo.</div>`;
+  }
+  const outsHtml = outs.map(o=>`
+    <div class="change-row">
+      <span class="qtytag">${o.qty}x</span>
+      <span class="out">${esc(o.name)}</span>
+      <button class="rm" onclick="removeSbEntry('outs','${esc(o.name).replace(/'/g,"\\'")}')">${ICON('x')}</button>
+    </div>`).join('');
+  const insHtml = ins.map(o=>`
+    <div class="change-row">
+      <span class="qtytag">${o.qty}x</span>
+      <span class="in">${esc(o.name)}</span>
+      <button class="rm" onclick="removeSbEntry('ins','${esc(o.name).replace(/'/g,"\\'")}')">${ICON('x')}</button>
+    </div>`).join('');
+  return `
+    ${outs.length? `<div class="fine" style="margin-bottom:4px;">Sai do main:</div>${outsHtml}`:''}
+    ${ins.length? `<div class="fine" style="margin:${outs.length?'10px':'0'} 0 4px;">Entra do sideboard:</div>${insHtml}`:''}
+  `;
+}
+function refreshSbSummary(){
+  const el = document.getElementById('sb-summary');
+  if(el) el.innerHTML = sbSummaryHtml();
+}
+function removeSbEntry(kind, name){
+  changesDraft[kind] = changesDraft[kind].filter(e=>e.name!==name);
+  refreshSbSummary();
+}
+function changesBlockHtml(deckId, mode){
+  const deck = deckById(deckId);
+  const handler = mode==='quick' ? 'openSbPickerFromQuick()' : 'openSbPickerFromRound()';
+  return `
+    <label>Sideboard</label>
+    <div id="sb-summary">${sbSummaryHtml()}</div>
+    ${deck ? `<button type="button" class="btn-secondary" style="width:100%; margin-top:8px; display:flex; align-items:center; justify-content:center; gap:8px;" onclick="${handler}">${ICON('book')} Sideboard</button>`
+      : `<div class="fine">Este deck ainda não tem lista guardada.</div>`}
+  `;
+}
+
+/* ---------- picker de sideboard ---------- */
+function openSbPickerFromRound(){
+  roundDraft.opponent = document.getElementById('r-opp').value;
+  roundDraft.gf = document.getElementById('r-gf').value;
+  roundDraft.ga = document.getElementById('r-ga').value;
+  roundDraft.gd = document.getElementById('r-gd').value;
+  const t = state.tournaments.find(x=>x.id===roundModalTournamentId);
+  openSbPicker(t.deckId, 'round');
+}
+function openSbPickerFromQuick(){
+  quickDraft.opponent = document.getElementById('q-opp').value;
+  quickDraft.gf = document.getElementById('q-gf').value;
+  quickDraft.ga = document.getElementById('q-ga').value;
+  quickDraft.gd = document.getElementById('q-gd').value;
+  quickDraft.date = document.getElementById('q-date').value;
+  quickDraft.note = document.getElementById('q-note').value;
+  quickDraft.deckId = document.getElementById('q-deck').value;
+  openSbPicker(quickDraft.deckId, 'quick');
+}
+function openSbPicker(deckId, mode){
+  sbReturnMode = mode;
+  sbPickerDeckId = deckId;
+  renderSbPickerModal();
+}
+function closeSbPicker(){
+  if(sbReturnMode==='round') openModalNewRound(roundModalTournamentId, true);
+  else if(sbReturnMode==='quick') openModalNewQuick(true);
+  else closeModal();
+}
+function sbQtyFor(kind, name){
+  const e = changesDraft[kind].find(x=>x.name===name);
+  return e ? e.qty : 0;
+}
+function sbRow(kind, name, maxQty, rowId){
+  const q = sbQtyFor(kind, name);
+  return `
+    <div class="round-row" style="padding:5px 0; margin:0;">
+      <div class="opp" style="font-size:0.76rem; line-height:1.25;">${esc(name)}<br><span class="fine" style="font-size:0.62rem;">${maxQty}x no deck</span></div>
+      <div style="display:flex; align-items:center; gap:5px; flex-shrink:0;">
+        <button type="button" class="icon-btn" style="width:22px;height:22px;background:var(--bg-alt); font-size:0.8rem;" onclick="sbStep('${kind}','${esc(name).replace(/'/g,"\\'")}',-1,${maxQty},'${rowId}')">−</button>
+        <span id="${rowId}" style="font-family:'IBM Plex Mono',monospace; font-size:0.78rem; min-width:12px; text-align:center;">${q}</span>
+        <button type="button" class="icon-btn" style="width:22px;height:22px;background:var(--bg-alt); font-size:0.8rem;" onclick="sbStep('${kind}','${esc(name).replace(/'/g,"\\'")}',1,${maxQty},'${rowId}')">+</button>
+      </div>
+    </div>`;
+}
+function renderSbPickerModal(){
+  const deck = deckById(sbPickerDeckId);
+  const mainCards = deck ? parseDeckList(deck.main) : [];
+  const sbCards = deck ? parseDeckList(deck.sb) : [];
+  document.getElementById('modal-root').innerHTML = `
+    <div class="modal-bg">
+      <div class="modal" style="padding-left:14px; padding-right:14px;">
+        <button class="close-x" onclick="closeSbPicker()">&#10005;</button>
+        <h3 style="font-size:1.02rem;">Sideboard — ${deck? esc(deck.name):''}</h3>
+        <div class="fine" style="margin-bottom:8px; font-size:0.72rem;">Escolhe quantas cópias saem do mainboard e quantas entram do sideboard.</div>
+
+        <div class="aname" style="font-size:0.82rem; margin-bottom:4px;">Retirar do mainboard</div>
+        <div class="card" style="padding:2px 10px; margin-bottom:10px; max-height:180px; overflow-y:auto;">
+          ${mainCards.length===0? `<div class="fine" style="padding:8px 0;">Sem mainboard guardado para este deck.</div>` :
+            mainCards.map((c,i)=> sbRow('outs', c.name, c.qty, 'sbq-out-'+i)).join('')}
+        </div>
+
+        <div class="aname" style="font-size:0.82rem; margin-top:10px; margin-bottom:4px;">Adicionar do sideboard</div>
+        <div class="card" style="padding:2px 10px; margin-bottom:10px; max-height:180px; overflow-y:auto;">
+          ${sbCards.length===0? `<div class="fine" style="padding:8px 0;">Sem sideboard guardado para este deck.</div>` :
+            sbCards.map((c,i)=> sbRow('ins', c.name, c.qty, 'sbq-in-'+i)).join('')}
+        </div>
+
+        <div class="modal-actions">
+          <button class="btn-primary" style="width:100%" onclick="closeSbPicker()">Concluído</button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+function sbStep(kind, name, delta, maxQty, rowId){
+  const list = changesDraft[kind];
+  let entry = list.find(e=>e.name===name);
+  let q = entry ? entry.qty : 0;
+  q = Math.max(0, Math.min(maxQty, q+delta));
+  if(q===0){ if(entry) list.splice(list.indexOf(entry),1); }
+  else if(entry){ entry.qty = q; }
+  else { list.push({name, qty:q}); }
+  const span = document.getElementById(rowId);
+  if(span) span.textContent = q;
+}
+
+/* ---------- modal: TORNEIO ---------- */
+function openModalNewTournament(){
+  const stores = knownStores();
+  document.getElementById('modal-root').innerHTML = `
+    <div class="modal-bg" onclick="if(event.target===this) closeModal()">
+      <div class="modal">
+        <button class="close-x" onclick="closeModal()">&#10005;</button>
+        <h3>Abrir torneio</h3>
+        <label for="t-store">Loja</label>
+        <input id="t-store" list="stores-list" placeholder="ex. Elfo's Store">
+        <datalist id="stores-list">${stores.map(s=>`<option value="${esc(s)}">`).join('')}</datalist>
+
+        <label for="t-deck">Deck</label>
+        <select id="t-deck">
+          ${state.decks.map(d=>`<option value="${d.id}">${esc(d.name)}</option>`).join('')}
+        </select>
+
+        <div class="row2">
+          <div>
+            <label for="t-format">Formato</label>
+            <input id="t-format" value="Pauper">
+          </div>
+          <div>
+            <label for="t-date">Data</label>
+            <input id="t-date" type="date" value="${todayISO()}">
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button class="btn-secondary" onclick="closeModal()">Cancelar</button>
+          <button class="btn-primary" onclick="submitNewTournament()">Abrir torneio</button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+function submitNewTournament(){
+  const store = document.getElementById('t-store').value.trim();
+  if(!store){ document.getElementById('t-store').focus(); return; }
+  const deckId = document.getElementById('t-deck').value;
+  const format = document.getElementById('t-format').value.trim() || 'Pauper';
+  const date = document.getElementById('t-date').value || todayISO();
+  state.tournaments.push({id: uid(), date, store, format, deckId, status:'open', rounds:[]});
+  saveTournaments();
+  closeModal();
+  setTab('registo');
+  showToast('Torneio aberto');
+}
+
+let roundResultPick = 'W';
+function openModalNewRound(tournamentId, keepDraft){
+  roundModalTournamentId = tournamentId;
+  if(!keepDraft){
+    roundResultPick = 'W';
+    changesDraft = {outs:[], ins:[]};
+    roundDraft = {opponent:'', gf:'', ga:'', gd:''};
+  }
+  const archetypes = knownArchetypes();
+  const t = state.tournaments.find(x=>x.id===tournamentId);
+  const nextRound = (t? t.rounds.length : 0) + 1;
+  const deck = deckById(t.deckId);
+  document.getElementById('modal-root').innerHTML = `
+    <div class="modal-bg" onclick="if(event.target===this) closeModal()">
+      <div class="modal">
+        <button class="close-x" onclick="closeModal()">&#10005;</button>
+        <h3>Ronda ${nextRound}</h3>
+
+        <div class="deck-select-view">A jogar: <strong>${esc(deckLabel(t.deckId, t.deck))}</strong>
+        ${deck? `<button class="toggle-list" onclick="toggleDeckList('modal-round')" style="margin-top:4px">Ver lista</button>
+          <div id="dl-modal-round" style="display:none">
+            <div class="deck-list-view"><strong>Mainboard</strong><br>${esc(deck.main)||'—'}</div>
+            <div class="deck-list-view"><strong>Sideboard</strong><br>${esc(deck.sb)||'—'}</div>
+          </div>` : ''}
+        </div>
+
+        <label for="r-opp">Arquétipo adversário</label>
+        <input id="r-opp" list="arch-list" placeholder="ex. Boros Aggro" value="${esc(roundDraft.opponent)}">
+        <datalist id="arch-list">${archetypes.map(a=>`<option value="${esc(a)}">`).join('')}</datalist>
+
+        <label>Resultado</label>
+        <div class="seg" id="r-seg">
+          <button type="button" class="${roundResultPick==='W'?'active W':''}" onclick="pickResult('W')">Vitória</button>
+          <button type="button" class="${roundResultPick==='L'?'active L':''}" onclick="pickResult('L')">Derrota</button>
+          <button type="button" class="${roundResultPick==='D'?'active D':''}" onclick="pickResult('D')">Empate</button>
+        </div>
+
+        <label>Jogos (opcional)</label>
+        <div class="row3-eq">
+          <input id="r-gf" type="number" min="0" max="3" placeholder="Venc." value="${esc(roundDraft.gf)}">
+          <input id="r-ga" type="number" min="0" max="3" placeholder="Perd." value="${esc(roundDraft.ga)}">
+          <input id="r-gd" type="number" min="0" max="3" placeholder="Empat." value="${esc(roundDraft.gd)}">
+        </div>
+
+        ${changesBlockHtml(t.deckId, 'round')}
+
+        <div class="modal-actions">
+          <button class="btn-secondary" onclick="closeModal()">Cancelar</button>
+          <button class="btn-primary" onclick="submitNewRound('${tournamentId}', ${nextRound})">Guardar ronda</button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+function pickResult(r){
+  roundResultPick = r;
+  document.querySelectorAll('#r-seg button').forEach(b=>b.classList.remove('active'));
+  const idx = {W:0,L:1,D:2}[r];
+  document.querySelectorAll('#r-seg button')[idx].classList.add('active');
+}
+function submitNewRound(tournamentId, round){
+  const opponent = document.getElementById('r-opp').value.trim();
+  if(!opponent){ document.getElementById('r-opp').focus(); return; }
+  const gfRaw = document.getElementById('r-gf').value;
+  const gaRaw = document.getElementById('r-ga').value;
+  const gdRaw = document.getElementById('r-gd').value;
+  const t = state.tournaments.find(x=>x.id===tournamentId);
+  t.rounds.push({
+    id: uid(), round, opponent, result: roundResultPick,
+    gf: gfRaw===''? null : Number(gfRaw),
+    ga: gaRaw===''? null : Number(gaRaw),
+    gd: gdRaw===''? null : Number(gdRaw),
+    changes: {outs:[...changesDraft.outs], ins:[...changesDraft.ins]}
+  });
+  saveTournaments();
+  changesDraft = {outs:[], ins:[]};
+  roundDraft = {opponent:'', gf:'', ga:'', gd:''};
+  closeModal();
+  render();
+  showToast('Ronda guardada');
+}
+function removeRound(tournamentId, roundId){
+  const t = state.tournaments.find(x=>x.id===tournamentId);
+  t.rounds = t.rounds.filter(r=>r.id!==roundId);
+  saveTournaments();
+  render();
+  showToast('Ronda removida');
+}
+function removeTournament(tournamentId){
+  showConfirm('Remover este torneio e todas as rondas registadas nele? Esta ação não pode ser desfeita.', function(){
+    state.tournaments = state.tournaments.filter(t=>t.id!==tournamentId);
+    saveTournaments();
+    render();
+    showToast('Torneio removido');
+  }, 'Remover');
+}
+function closeTournament(tournamentId){
+  const t = state.tournaments.find(x=>x.id===tournamentId);
+  const finish = function(){
+    t.status = 'closed';
+    saveTournaments();
+    render();
+    showToast('Torneio fechado');
+  };
+  if(t.rounds.length===0){
+    showConfirm('Este torneio ainda não tem rondas registadas. Fechar mesmo assim?', finish, 'Fechar');
+  } else {
+    finish();
+  }
+}
+
+/* ---------- modal: MTGO ---------- */
+let quickResultPick = 'W';
+function openModalNewQuick(keepDraft){
+  if(!keepDraft){
+    quickResultPick = 'W';
+    changesDraft = {outs:[], ins:[]};
+    quickDraft = {opponent:'', gf:'', ga:'', gd:'', date:todayISO(), note:'', deckId:(state.decks[0]&&state.decks[0].id)||''};
+  }
+  const archetypes = knownArchetypes();
+  document.getElementById('modal-root').innerHTML = `
+    <div class="modal-bg" onclick="if(event.target===this) closeModal()">
+      <div class="modal">
+        <button class="close-x" onclick="closeModal()">&#10005;</button>
+        <h3>Registar jogo MTGO</h3>
+
+        <label for="q-deck">Deck</label>
+        <select id="q-deck" onchange="onQuickDeckChange()">
+          ${state.decks.map(d=>`<option value="${d.id}" ${quickDraft.deckId===d.id?'selected':''}>${esc(d.name)}</option>`).join('')}
+        </select>
+        <button class="toggle-list" onclick="toggleDeckList('modal-quick')" style="margin-top:2px">Ver lista</button>
+        <div id="dl-modal-quick" style="display:none"></div>
+
+        <label for="q-opp">Arquétipo adversário</label>
+        <input id="q-opp" list="arch-list-q" placeholder="ex. Mono-U Faeries" value="${esc(quickDraft.opponent)}">
+        <datalist id="arch-list-q">${archetypes.map(a=>`<option value="${esc(a)}">`).join('')}</datalist>
+
+        <label>Resultado</label>
+        <div class="seg" id="q-seg">
+          <button type="button" class="${quickResultPick==='W'?'active W':''}" onclick="pickQuickResult('W')">Vitória</button>
+          <button type="button" class="${quickResultPick==='L'?'active L':''}" onclick="pickQuickResult('L')">Derrota</button>
+          <button type="button" class="${quickResultPick==='D'?'active D':''}" onclick="pickQuickResult('D')">Empate</button>
+        </div>
+
+        <div class="row3-eq">
+          <input id="q-gf" type="number" min="0" max="3" placeholder="Venc." value="${esc(quickDraft.gf)}">
+          <input id="q-ga" type="number" min="0" max="3" placeholder="Perd." value="${esc(quickDraft.ga)}">
+          <input id="q-gd" type="number" min="0" max="3" placeholder="Empat." value="${esc(quickDraft.gd)}">
+        </div>
+
+        <label for="q-date">Data</label>
+        <input id="q-date" type="date" value="${quickDraft.date||todayISO()}">
+
+        <label for="q-note">Nota (ex. nome do evento/liga)</label>
+        <input id="q-note" placeholder="opcional" value="${esc(quickDraft.note)}">
+
+        ${changesBlockHtml(quickDraft.deckId, 'quick')}
+
+        <div class="modal-actions">
+          <button class="btn-secondary" onclick="closeModal()">Cancelar</button>
+          <button class="btn-primary" onclick="submitNewQuick()">Guardar</button>
+        </div>
+      </div>
+    </div>
+  `;
+  onQuickDeckChange();
+}
+function onQuickDeckChange(){
+  const id = document.getElementById('q-deck').value;
+  quickDraft.deckId = id;
+  const d = deckById(id);
+  const box = document.getElementById('dl-modal-quick');
+  if(!d){ if(box) box.innerHTML=''; return; }
+  box.innerHTML = `
+    <div class="deck-list-view"><strong>Mainboard</strong><br>${esc(d.main)||'—'}</div>
+    <div class="deck-list-view"><strong>Sideboard</strong><br>${esc(d.sb)||'—'}</div>
+  `;
+}
+function pickQuickResult(r){
+  quickResultPick = r;
+  document.querySelectorAll('#q-seg button').forEach(b=>b.classList.remove('active'));
+  const idx = {W:0,L:1,D:2}[r];
+  document.querySelectorAll('#q-seg button')[idx].classList.add('active');
+}
+function submitNewQuick(){
+  const opponent = document.getElementById('q-opp').value.trim();
+  if(!opponent){ document.getElementById('q-opp').focus(); return; }
+  const deckId = document.getElementById('q-deck').value;
+  const gfRaw = document.getElementById('q-gf').value;
+  const gaRaw = document.getElementById('q-ga').value;
+  const gdRaw = document.getElementById('q-gd').value;
+  const date = document.getElementById('q-date').value || todayISO();
+  const note = document.getElementById('q-note').value.trim();
+  state.quickMatches.push({
+    id: uid(), date, opponent, result: quickResultPick, deckId,
+    gf: gfRaw===''? null : Number(gfRaw),
+    ga: gaRaw===''? null : Number(gaRaw),
+    gd: gdRaw===''? null : Number(gdRaw),
+    note, changes: {outs:[...changesDraft.outs], ins:[...changesDraft.ins]}
+  });
+  saveQuick();
+  changesDraft = {outs:[], ins:[]};
+  quickDraft = {opponent:'', gf:'', ga:'', gd:'', date:'', note:'', deckId:''};
+  closeModal();
+  render();
+  showToast('Jogo MTGO guardado');
+}
+function removeQuick(id){
+  state.quickMatches = state.quickMatches.filter(m=>m.id!==id);
+  saveQuick();
+  render();
+  showToast('Jogo removido');
+}
+
+function closeModal(){ document.getElementById('modal-root').innerHTML=''; }
+
+/* expose to inline handlers */
+Object.assign(window, {
+  setTab,
+  toggleTheme, openModalAbout, fabAction,
+  showConfirm, cancelConfirm, confirmConfirm,
+  openModalDeck, submitDeck, removeDeck, toggleDeckList, toggleStatsDeck,
+  setStatsPeriod, setStatsSource, setStatsDeck,
+  openModalChooseType,
+  openModalNewTournament, submitNewTournament, removeTournament,
+  openModalNewRound, pickResult, submitNewRound, removeRound, closeTournament,
+  openModalNewQuick, pickQuickResult, submitNewQuick, removeQuick, onQuickDeckChange,
+  openSbPickerFromRound, openSbPickerFromQuick, closeSbPicker, sbStep, removeSbEntry,
+  setSbGuideView, exportSbGuide,
+  closeModal
+});
+
+loadTheme();
+loadAll();
+</script>
+</body>
+</html>
